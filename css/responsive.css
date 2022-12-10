@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1024px) {
+  section.banner-photographe#banner {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    position: relative;
+  }
+
+  section.grid-gallerie {
+    padding: 25px;
+  }
+
+  .banner-text-wrapper {
+    width: 70%;
+  }
+
+  .banner-img img {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    height: 12rem;
+    width: 12rem;
+  }
+
+  button.banner-photographer-btn {
+    margin: 0px 10%;
+  }
+
+  div.img-wrapper {
+    height: 18rem;
+  }
+
+  .total-like-counter {
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  section.filter {
+    padding: 10px 50px;
+  }
+}

@@ -1,0 +1,182 @@
+#modal-window.open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+#modal-window.open .modal {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out, visibility 0.1s;
+}
+
+#modal-window.open form.shake {
+  animation: shake 0.4s !important;
+}
+
+body.modal-open-antiscroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+#modal-window {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(107, 107, 107, 0.7);
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+.modal {
+  border-radius: 5px;
+  background-color: #db8876;
+  opacity: 0;
+  visibility: hidden;
+  width: 50%;
+  padding: 35px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 50px));
+  transition: opacity 0.4s ease-out, transform 0.3s ease-out,
+    visibility 0.2s ease-out;
+}
+
+.modal header {
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+h2.modal-title {
+  font-size: 3.3rem;
+}
+
+h2.modal-thanks {
+  display: none;
+  font-size: 3.3rem;
+}
+
+.modal header img {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  max-height: 25px;
+  max-width: 25px;
+}
+
+.modal header img:hover {
+  opacity: 50%;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form.modal-form label {
+  color: #312e2e;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+}
+
+form input {
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+span.message-erreur {
+  color: #901c1c;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+span.form-photographer-name {
+  font-size: 3.3rem;
+}
+
+textarea.input-message {
+  border-radius: 0.6rem;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+  resize: none;
+  max-height: 8rem;
+  height: 8rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+button.submit-form {
+  background-color: #901c1c;
+  color: white;
+  padding: 1rem 5rem;
+  border: none;
+  border-radius: 0.6rem;
+  margin-top: 2rem;
+  align-self: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 0%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .modal {
+    width: 90%;
+    padding: 20px 10px;
+    overflow: hidden;
+  }
+}

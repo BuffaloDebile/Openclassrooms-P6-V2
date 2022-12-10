@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+  <link rel="icon" type="image/png" href="sources/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <title>Fisheye - Photographe</title>
+  <meta name="description" content="découvrez tout nos photographes de chez Fisheye">
+  <meta name="keywords" content="FishEye, Openclassrooms, photographes, project 6">
+  <meta name="author" content="FishEye">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="preload">
+  <header class="header">
+    <a href="index.html"><img src="sources/img/logo/logo.svg" class="logo" alt="logo Fish Eye" /></a>
+  </header>
+  <main id="main-photographe" aria-hidden="false">
+
+    <section class="banner-photographe" id="banner" role="banner">
+      <!-- <div class="banner-text-wrapper">
+        <h1 class="title" lang="en">Ellie-Rose Wilkens</h1>
+        <p class="location">Paris ,France</p>
+        <p class="tagline">Capturer des compositions complexes</p>
+      </div><button class="banner-photographer-btn" type="button" aria-haspopup="dialog" aria-controls="dialog"
+        aria-label="Contacter le photographe">Contacter-moi</button>
+      <div class="banner-img"><img src="./sources/img/1_small/PhotographersID/EllieRoseWilkens.jpg"
+          alt="Ellie-Rose Wilkens"></div> -->
+    </section>
+
+    <section class="filter">
+      <h2 id="trier">Trier par </h2>
+      <div class="dropdown-menu">
+        <div class="filter-select">
+          <a href="#" role="button" class="filter-select-top" aria-controls="filter-options" aria-haspopup="listbox"
+            aria-label="Trier par" aria-expanded="false" aria-labelledby="trier">
+            <span class="chosen">Popularité</span>
+            <div class="arrow"></div>
+          </a>
+          <div class="filter-options-container" role="listbox" id="filter-options">
+            <a href="#" class="filter-option selected" data-value="popularite" aria-selected="true"
+              aria-label="Trier par popularité" aria-labelledby="trier" role="option">Popularité</a>
+            <a href="#" class="filter-option" aria-labelledby="trier" data-value="date" aria-selected="false"
+              aria-label="Trier par date" role="option">Date</a>
+            <a href="#" class="filter-option" aria-labelledby="trier" data-value="titre" aria-selected="false"
+              aria-label="Trier par titre" role="option">Titre</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-gallerie">
+      <!-- <article class="card">
+        <a href="#" class="card-wrapper" role="button" aria-describedby="ouvrir le slider">
+
+          <div class="img-wrapper">
+            <img class="gallerie-img" src="./sources/img/1_small/ellie-rosewilkens/sport_water_tunnel.jpg" alt="">
+          </div>
+        </a>
+        <div class="card-footer">
+          <p>Sport Tricks in the air</p>
+          <div class="heart-like">
+            <p class="like-counter" aria-label="Nombre de likes 150">150</p>
+            <button class="heart-link" aria-label="aimer cette photo" role="button">
+              <i class="heart-icon far fa-heart fa-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+      </article> -->
+
+
+      <!-- <article class="card">
+        <a href="#" class="card-wrapper" role="button" aria-describedby="ouvrir le slider">
+
+          <div class="img-wrapper">
+            <video  playsinline autoplay muted loop>
+              <source src="./sources/img/1_small/mimikeel/Animals_Wild_Horses_in_the_mountains.mp4" type="video/mp4">
+            </video>
+          </div>
+        </a>
+        <div class="card-footer">
+          <p>Sport Tricks in the air</p>
+          <div class="heart-like">
+            <p class="like-counter" aria-label="Nombre de likes 150">150</p>
+            <button class="heart-link" aria-label="aimer cette photo" role="button">
+              <i class="heart-icon far fa-heart fa-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+      </article> -->
+    </section>
+
+    <div class="total-like-counter">
+      <div class="total-like"><span></span><i class="heart fas fa-heart fa-2xl"></i></div>
+      <div class="price"></div>
+    </div>
+
+  </main>
+  <!-- Contact Form -->
+  <div id="modal-window" role="dialog" aria-labelledby="modal-window" aria-modal="true" aria-hidden="true"
+    tabindex="-1">
+    <div class="modal">
+      <header>
+        <h2 class="modal-title">Contactez-moi<br><span class="form-photographer-name">Lisa</span></h2>
+        <h2 class="modal-thanks">Merci pour votre message</h2>
+        <img title="fermer le formulaire" alt="close button icon" aria-label="Fermer " role="button"
+          src="sources/icons/close.svg" class="close-contact" />
+      </header>
+      <form class="modal-form" id="contact" autocomplete="off">
+        <label for="prenom">Prénom</label>
+        <input class="input-prenom" id="prenom" type="text" name="prénom" aria-label="Entrez votre prénom"
+          aria-required="true" aria-labelledby="prenom">
+        <span class="message-erreur">Vous devez entrer votre prénom !</span>
+        <label for="nom">Nom</label>
+        <input class="input-nom" id="nom" type="text" name="nom" aria-label="Entrez votre nom" aria-required="true"
+          aria-labelledby="nom">
+        <span class=" message-erreur">Vous devez entrer votre nom !</span>
+        <label for="email">Email<br></label>
+        <input class="input-email" id="email" type="email" name="email" aria-label="entrez votre mail"
+          aria-required="true" aria-labelledby="email">
+        <span class="message-erreur">Vous devez entrer un Email valide !
+        </span>
+        <label for="message">Votre Message<br></label>
+        <textarea class="input-message" id="message" name="message" aria-required="true"
+          aria-describedby="message"></textarea>
+        <span class="message-erreur">Votre devez entrer un message valide ! (150 caractères max) </span>
+        <button class="submit-form" type="submit" value="Envoyer" aria-label="Envoyer le message">
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- Lightbox slider -->
+  <section class="lightbox" role="dialog" aria-label="image closeup view open " aria-hidden="true" aria-modal="true">
+    <div class="lightbox-windows">
+      <ul class="container-slides">
+      </ul>
+      <div class="lightbox-btns">
+        <button class="gauche" aria-label="media precedent">
+          <em class="fas fa-chevron-left"></em>
+        </button>
+        <button class="droit" aria-label="media suivant">
+          <em class="fas fa-chevron-right"></em>
+        </button>
+        <button class="fermer" aria-label="Fermer Le carrousel">
+          <em class="fas fa-times close-lightbox-media"></em>
+        </button>
+
+        <h2 class="titre-lightbox">Animals Wild Horses in the mountains</h2>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="./scripts/photographerPage/index.js"></script>
+</body>
+
+</html>
